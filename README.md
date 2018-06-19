@@ -82,7 +82,7 @@ class ProductSerializer < Oat::Serializer
   adapter Oat::Adapters::HAL
 
   schema do
-    type "product"
+    type 'product', 'electronic'
     link :self, href: product_url(item)
 
     properties do |p|
@@ -486,7 +486,7 @@ You can define these in your own custom adapters if you're using your own media 
 class CustomAdapter < Oat::Adapter
 
   def type(*types)
-    data[:rel] = types
+    data[:rel] = Array(types)
   end
 
   def property(name, value)
