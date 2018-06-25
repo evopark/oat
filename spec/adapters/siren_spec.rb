@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'oat/adapters/siren'
-
 describe Oat::Adapters::Siren do
 
   include Fixtures
@@ -29,7 +28,6 @@ describe Oat::Adapters::Siren do
         { :rel => [:self], :href => "http://foo.bar.com/#{user.id}" },
         { :rel => [:empty], :href => nil }
       )
-
       expect(hash.fetch(:entities).size).to be 2
 
       # embedded friends

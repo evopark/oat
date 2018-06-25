@@ -34,8 +34,6 @@ module Fixtures
               attrs.name manager.name
               attrs.age manager.age
             end
-
-            entities [:friends, 'http://example.org/rels/person'], item.friends, klass, :message => "Merged into parent's context"
           end
 
           if adapter.respond_to?(:title)
