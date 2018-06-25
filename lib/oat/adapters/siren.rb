@@ -15,11 +15,11 @@ module Oat
       # https://github.com/kevinswiber/siren#rel
       def rel(*rels)
         # rel must be an array.
-        data[:rel] = Array(rels)
+        data[:rel] = Array(rels).flatten
       end
 
       def type(*types)
-        data[:class] = Array(types)
+        data[:class] = Array(types).flatten
       end
 
       def title(title)
