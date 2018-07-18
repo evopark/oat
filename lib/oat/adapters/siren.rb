@@ -22,6 +22,11 @@ module Oat
         data[:class] = Array(types).flatten
       end
 
+      # For nested entities
+      def href(href)
+        data[:href] = href
+      end
+
       def title(title)
         data[:title] = title
       end
