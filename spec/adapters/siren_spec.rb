@@ -73,11 +73,21 @@ describe Oat::Adapters::Siren do
         :type => 'application/json'
       )
 
-      expect(actions.first.fetch(:fields)).to include(
+      fields = actions.first.fetch(:fields)
+      expect(fields).to include(
         :class => ['string'],
         :name => :current_password,
         :type => :password,
         :title => 'enter password:'
+      )
+      expect(fields).to include(
+        :name => :two_plus_two,
+        :class => [],
+        :title => 'what is 2+2?',
+        :type => :number,
+        :min => 1,
+        :max => 7,
+        :step => 1
       )
     end
 

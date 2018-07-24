@@ -52,6 +52,13 @@ module Fixtures
                 field.type :password
                 field.title 'enter password:'
               end
+              action.field :two_plus_two do |field|
+                field.title 'what is 2+2?'
+                field.type :number
+                field.min 1 if field.respond_to?(:min)
+                field.max 7 if field.respond_to?(:max)
+                field.step 1 if field.respond_to?(:step)
+              end
             end
           end
         end
