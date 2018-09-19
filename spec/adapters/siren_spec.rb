@@ -89,6 +89,13 @@ describe Oat::Adapters::Siren do
         :max => 7,
         :step => 1
       )
+      expect(fields).to include(
+        :name => :validate_field,
+        :class => [],
+        :title => 'validate field',
+        :type => :number,
+        :validation => { format: '\d+', message: 'must be a number'}
+      )
     end
 
     context 'with a nil entity relationship' do

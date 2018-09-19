@@ -59,6 +59,11 @@ module Fixtures
                 field.max 7 if field.respond_to?(:max)
                 field.step 1 if field.respond_to?(:step)
               end
+              action.field :validate_field do |field|
+                field.title 'validate field'
+                field.type :number
+                field.validation format: '\d+', message: 'must be a number'
+              end
             end
           end
         end
