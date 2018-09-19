@@ -106,7 +106,7 @@ module Oat
             data[:class].concat(Array(value))
           end
 
-          %w[category type value title min max step].each do |attribute|
+          %w[category type value title min max step validation].each do |attribute|
             define_method(attribute) do |value|
               data[attribute.to_sym] = value
             end
