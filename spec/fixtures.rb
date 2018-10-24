@@ -64,6 +64,11 @@ module Fixtures
                 field.type :number
                 field.validation format: '\d+', message: 'must be a number'
               end
+              action.field :description do |field|
+                field.title 'description field'
+                field.type :textarea
+                field.placeholder 'type in here..'
+              end
             end
           end
         end
