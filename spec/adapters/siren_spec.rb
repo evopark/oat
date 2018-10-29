@@ -96,6 +96,13 @@ describe Oat::Adapters::Siren do
         :type => :number,
         :validation => { format: '\d+', message: 'must be a number'}
       )
+      expect(fields).to include(
+        :name => :description,
+        :class => [],
+        :title => 'description field',
+        :type => :textarea,
+        :placeholder => 'type in here..'
+      )
     end
 
     context 'with a nil entity relationship' do
